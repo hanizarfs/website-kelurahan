@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+nav ul.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul.navbar li {
+    margin-left: 20px;
+}
+
+nav ul.navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul.navbar li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero .btn {
+    background: #f76c6c;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.spotlight, .news-events {
+    padding: 40px 0;
+    background: #f4f4f4;
+    margin-top: 20px;
+}
+
+.news-events-content {
+    display: flex;
+    gap: 20px;
+}
+
+.spotlight {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.spotlight-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.spotlight-text {
+    text-align: justify;
+}
+
+.sidebar form {
+    margin-bottom: 20px;
+}
+
+.sidebar input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    padding: 10px;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    border: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
