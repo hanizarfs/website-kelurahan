@@ -1,102 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kelurahan Manahan</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Kelurahan Manahan Logo">
-                <h1>Kelurahan Manahan</h1>
-            </div>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Informasi Manahan</a></li>
-                    <li><a href="#">Pemerintahan</a></li>
-                    <li><a href="#">Pelayanan</a></li>
-                    <li><a href="#">Organisasi</a></li>
-                    <li><a href="#">Potensi Daerah</a></li>
-                    <li><a href="#">Galeri Manahan</a></li>
-                    <li><a href="#">Stadion Manahan</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+  <body>
+    <header class="px-12">
+      <div class="container flex justify-between items-center">
+        <div class="flex gap-2 justify-center items-center">
+          <img src="./assets/img/logo.svg" class="w-10 h-10" alt="Kelurahan Manahan Logo" />
+          <p>Kelurahan Manahan</p>
         </div>
+        <nav>
+          <ul class="navbar">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Informasi Manahan</a></li>
+            <li><a href="#">Pemerintahan</a></li>
+            <li><a href="#">Pelayanan</a></li>
+            <li><a href="#">Organisasi</a></li>
+            <li><a href="#">Potensi Daerah</a></li>
+            <li><a href="#">Galeri Manahan</a></li>
+            <li><a href="#">Stadion Manahan</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Discover Kelurahan Manahan, where tradition meets modernity.</h2>
-                <a href="#" class="btn">Explore →</a>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <h2>Discover Kelurahan Manahan, where tradition meets modernity.</h2>
+          <a href="#" class="btn">Explore →</a>
         </div>
+      </div>
     </section>
 
     <section class="spotlight">
-        <div class="container">
-            <h2>Spotlight & Announcement</h2>
-        </div>
+      <div class="container">
+        <h2>Spotlight & Announcement</h2>
+      </div>
     </section>
 
     <section class="news-events">
-        <div class="container">
-            <h2>Government News and Events</h2>
-            <div class="news-events-content">
-                <div class="spotlight">
-                    <h3>Spotlight</h3>
-                    <div class="spotlight-image">
-                        <img src="spotlight-image.jpg" alt="Spotlight Image">
-                    </div>
-                    <div class="spotlight-text">
-                        <p>Selamat Datang di Web Resmi Kelurahan Manahan
-                            Manahan merupakan sebuah kelurahan di kecamatan Banjarsari, Surakarta, Kelurahan ini memiliki kode pos
-                            57138.
-                            MANAHAN adalah nama sebuah kelurahan di Kota Solo. Lokasinya di bagian barat laut kota. Di bagian wilayah
-                            kota ini terdapat berbagai unsur kota yang penting seperti lapangan, perumahan, sekolah, tempat ibadah,
-                            bangunan industri, ruang terbuka hijau, prasarana jalan kereta api, jalan raya dengan deretan pohon cemara di
-                            pinggirnya, dan tempat-tempat bersejarah termasuk Gedung SMT Manahan kita.</p>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="sidebar">
-                    <h3>Pencarian</h3>
-                    <form action="#" method="get">
-                        <input type="text" name="search" placeholder="Search">
-                        <button type="submit">Search</button>
-                    </form>
-                    <h3>Postingan Terakhir</h3>
-                    <ul>
-                        <li><a href="#">Manahan, Stadion Alternatif Pra Piala Asia March 17, 2015</a></li>
-                        <li><a href="#">Lomba Orkes keroncong Manahan Solo March 17, 2015</a></li>
-                        <li><a href="#">Puncak Memeriahkan Kemerdekaan RI - Wayang Kulit September 1, 2014</a></li>
-                        <li><a href="#">Perawatan lapangan Manahan July 3, 2014</a></li>
-                        <li><a href="#">Timnas Indonesia U-19 vs Lebanon U-19 di Stadion Manahan Solo May 30, 2014</a></li>
-                    </ul>
-                    <h3>Archives</h3>
-                    <ul>
-                        <li><a href="#">March 2015</a></li>
-                        <li><a href="#">September 2014</a></li>
-                        <li><a href="#">July 2014</a></li>
-                        <li><a href="#">May 2014</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <h2>Government News and Events</h2>
+        <div class="news-events-content">
+          <div class="spotlight">
+            <h3>Spotlight</h3>
+            <div class="spotlight-image">
+              <img src="spotlight-image.jpg" alt="Spotlight Image" />
             </div>
+            <div class="spotlight-text">
+              <p>
+                Selamat Datang di Web Resmi Kelurahan Manahan Manahan merupakan
+                sebuah kelurahan di kecamatan Banjarsari, Surakarta, Kelurahan
+                ini memiliki kode pos 57138. MANAHAN adalah nama sebuah
+                kelurahan di Kota Solo. Lokasinya di bagian barat laut kota. Di
+                bagian wilayah kota ini terdapat berbagai unsur kota yang
+                penting seperti lapangan, perumahan, sekolah, tempat ibadah,
+                bangunan industri, ruang terbuka hijau, prasarana jalan kereta
+                api, jalan raya dengan deretan pohon cemara di pinggirnya, dan
+                tempat-tempat bersejarah termasuk Gedung SMT Manahan kita.
+              </p>
+              <a href="#" class="btn">Read More</a>
+            </div>
+          </div>
+          <div class="sidebar">
+            <h3>Pencarian</h3>
+            <form action="#" method="get">
+              <input type="text" name="search" placeholder="Search" />
+              <button type="submit">Search</button>
+            </form>
+            <h3>Postingan Terakhir</h3>
+            <ul>
+              <li>
+                <a href="#"
+                  >Manahan, Stadion Alternatif Pra Piala Asia March 17, 2015</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Lomba Orkes keroncong Manahan Solo March 17, 2015</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Puncak Memeriahkan Kemerdekaan RI - Wayang Kulit September 1,
+                  2014</a
+                >
+              </li>
+              <li><a href="#">Perawatan lapangan Manahan July 3, 2014</a></li>
+              <li>
+                <a href="#"
+                  >Timnas Indonesia U-19 vs Lebanon U-19 di Stadion Manahan Solo
+                  May 30, 2014</a
+                >
+              </li>
+            </ul>
+            <h3>Archives</h3>
+            <ul>
+              <li><a href="#">March 2015</a></li>
+              <li><a href="#">September 2014</a></li>
+              <li><a href="#">July 2014</a></li>
+              <li><a href="#">May 2014</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Kelurahan Manahan. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2023 Kelurahan Manahan. All rights reserved.</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
