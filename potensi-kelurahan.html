@@ -21,174 +21,72 @@
             </a>
             <p class="font-semibold text-white">Kelurahan Manahan</p>
           </div>
-          <!-- Tombol Navigasi untuk layar kecil -->
-          <button
-            id="navToggle"
-            class="md:hidden text-white focus:outline-none"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
 
-          <!-- Navbar Desktop -->
-          <nav
-            class="hidden md:flex flex-col md:flex-row gap-2 absolute md:relative top-14 md:top-auto left-0 right-0 md:left-auto md:right-auto bg-[#1C2B78] md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0"
-          >
-            <a
-              href="index.html"
-              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
-            >
-              Beranda
-            </a>
-            <div class="hidden relative md:inline-block">
-              <button
-                id="dropdownButtonHover"
-                class="transition-colors duration-300 font-semibold text-white bg-blue-900 px-3 py-1.5 rounded-md"
-              >
-                Profil Kelurahan
-              </button>
-              <ul
-                id="dropdownMenu"
-                class="absolute hidden text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md"
-              >
-                <a href="tentang-kami.html">
-                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
-                    Tentang Kami
-                  </li>
-                </a>
-                <a href="visi-misi.html">
-                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
-                    Visi & Misi
-                  </li>
-                </a>
-                <a href="sejarah.html">
-                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
-                    Sejarah
-                  </li>
-                </a>
-                <a href="geografis-kelurahan.html">
-                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
-                    Geografis Kelurahan
-                  </li>
-                </a>
-                <a href="demografi-kelurahan.html">
-                  <li class="px-4 py-2 mt-1 bg-blue-800 cursor-pointer">
-                    Demografi Kelurahan
-                  </li>
-                </a>
-              </ul>
-            </div>
-            <a
-              href="#"
-              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
-            >
-              Pemerintahan
-            </a>
-            <a
-              href="#"
-              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
-            >
-              Pelayanan
-            </a>
-            <a
-              href="#"
-              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
-            >
-              Organisasi
-            </a>
-            <a
-              href="#"
-              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
-            >
-              Potensi Daerah
-            </a>
-            <a
-              href="#"
-              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
-            >
-              Galeri Manahan
-            </a>
-          </nav>
+<!-- Navbar Desktop -->
+<nav class="hidden md:flex flex-col md:flex-row gap-2 absolute md:relative top-14 md:top-auto left-0 right-0 md:left-auto md:right-auto bg-[#1C2B78] md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0">
+  <a href="index.html" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Beranda</a>
+  
+  <div class="relative md:inline-block group">
+    <button class="transition-colors duration-300 font-semibold text-white bg-blue-900 px-3 py-1.5 rounded-md">Profil Kelurahan</button>
+    <ul class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md">
+      <a href="tentang-kami.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Tentang Kami</li></a>
+      <a href="visi-misi.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Visi & Misi</li></a>
+      <a href="sejarah.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Sejarah</li></a>
+      <a href="geografis-kelurahan.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Geografis Kelurahan</li></a>
+      <a href="demografi-kelurahan.html"><li class="px-4 py-2 mt-1 bg-blue-800 cursor-pointer">Demografi Kelurahan</li></a>
+    </ul>
+  </div>
 
-          <!-- Navbar Mobile -->
-          <nav
-            id="navMenu"
-            class="hidden h-screen bg-blue-800/90 backdrop-blur-md flex-row gap-2 absolute md:relative md:top-auto left-0 right-0 md:left-auto md:right-auto md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0"
-          >
-            <div class="flex flex-col justify-center items-start gap-4 h-full">
-              <a
-                href="#"
-                class="text-2xl transition-colors duration-300 font-semibold text-white bg-blue-900 px-6 py-4 rounded-xl w-full"
-              >
-                Beranda
-              </a>
-              <div class="relative w-full">
-                <button
-                  id="dropdownButton"
-                  class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
-                >
-                  Informasi Manahan
-                </button>
-                <ul
-                  id="dropdownList"
-                  class="relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
-                >
-                  <li
-                    class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
-                  >
-                    Sejarah
-                  </li>
-                  <li
-                    class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
-                  >
-                    Tentang Kami
-                  </li>
-                </ul>
-              </div>
-              <a
-                href="#"
-                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
-              >
-                Pemerintahan
-              </a>
-              <a
-                href="#"
-                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
-              >
-                Pelayanan
-              </a>
-              <a
-                href="#"
-                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
-              >
-                Organisasi
-              </a>
-              <a
-                href="#"
-                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
-              >
-                Potensi Daerah
-              </a>
-              <a
-                href="#"
-                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
-              >
-                Galeri Manahan
-              </a>
-            </div>
-          </nav>
+  <div class="relative md:inline-block group">
+    <button class="transition-colors duration-300 font-semibold text-white bg-blue-900 px-3 py-1.5 rounded-md">Pemerintahan</button>
+    <ul class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md">
+      <a href="struktur-organisasi.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Struktur Organisasi</li></a>
+      <a href="perangkat-kelurahan.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Perangkat Kelurahan</li></a>
+    </ul>
+  </div>
+
+  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Pelayanan</a>
+  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Organisasi</a>
+  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Potensi Daerah</a>
+  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Galeri Manahan</a>
+</nav>
+
+<!-- Navbar Mobile -->
+<nav id="navMenu" class="hidden h-screen bg-blue-800/90 backdrop-blur-md absolute top-0 left-0 right-0 md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0">
+  <button id="close-btn" class="p-1 text-white rounded-lg absolute top-4 right-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+  
+  <div class="flex flex-col justify-center items-start gap-4 h-full">
+    <a href="#" class="text-2xl transition-colors duration-300 font-semibold text-white bg-blue-900 px-6 py-4 rounded-xl w-full">Beranda</a>
+    
+    <div class="relative w-full">
+      <button id="dropdownButton" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start">Informasi Manahan</button>
+      <ul id="dropdownList" class="relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full">
+        <li class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer">Sejarah</li>
+        <li class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer">Tentang Kami</li>
+      </ul>
+    </div>
+    
+    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Pemerintahan</a>
+    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Pelayanan</a>
+    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Organisasi</a>
+    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Potensi Daerah</a>
+    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Galeri Manahan</a>
+  </div>
+</nav>
+
+<!-- Menu Button for Mobile -->
+<button id="menu-btn" class="text-white p-1 rounded-lg block md:hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16" />
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h7" />
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16" />
+  </svg>
+</button>
+
         </div>
       </div>
     </header>
@@ -835,54 +733,38 @@
       </div>
     </footer>
 
-    <script>
-      // Tampilkan/Menyembunyikan Navbar pada layar kecil
-      const navToggle = document.getElementById("navToggle");
-      const navMenu = document.getElementById("navMenu");
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.getElementById("menu-btn");
+  const closeButton = document.getElementById("close-btn");
+  const navMenu = document.getElementById("navMenu");
+  const dropdownButton = document.getElementById("dropdownButton");
+  const dropdownList = document.getElementById("dropdownList");
 
-      navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("hidden");
-      });
+  // Toggle mobile menu
+  menuButton.addEventListener("click", () => {
+    navMenu.classList.remove("hidden");
+  });
 
-      const button = document.querySelector("#dropdownButtonHover");
-      const dropdown = document.querySelector("#dropdownMenu");
+  closeButton.addEventListener("click", () => {
+    navMenu.classList.add("hidden");
+  });
 
-      button.addEventListener("mouseenter", () => {
-        dropdown.classList.remove("hidden");
-      });
+  // Toggle dropdown menu
+  dropdownButton.addEventListener("click", () => {
+    dropdownList.classList.toggle("hidden");
+  });
 
-      button.addEventListener("mouseleave", () => {
-        // Tambahkan delay untuk mencegah dropdown tertutup saat menuju submenu
-        setTimeout(() => {
-          if (!dropdown.matches(":hover")) {
-            dropdown.classList.add("hidden");
-          }
-        }, 200);
-      });
+  // Close dropdown if clicked outside
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest('#dropdownButton')) {
+      dropdownList.classList.add("hidden");
+    }
+  });
+});
 
-      dropdown.addEventListener("mouseenter", () => {
-        dropdown.classList.remove("hidden");
-      });
-
-      dropdown.addEventListener("mouseleave", () => {
-        dropdown.classList.add("hidden");
-      });
-
-      const dropdownButton = document.getElementById("dropdownButton");
-      const dropdownList = document.getElementById("dropdownList");
-
-      dropdownButton.addEventListener("click", () => {
-        dropdownList.classList.toggle("hidden");
-      });
-
-      // Optional: Close dropdown if clicked outside
-      document.addEventListener("click", (event) => {
-        if (!dropdownButton.contains(event.target)) {
-          dropdownList.classList.add("hidden");
-        }
-      });
-    </script>
-
+</script>
+    
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
