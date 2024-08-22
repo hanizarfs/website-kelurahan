@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kelurahan Manahan - Kelurahan Manahan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.svg" />
+  </head>
+  <body>
+    <header class="bg-[#1C2B78] fixed top-0 z-20 w-full">
+      <div class="container px-6 md:px-20 py-3 mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 justify-center items-center">
+            <a href="#">
+              <img
+                class="w-auto h-10"
+                src="./assets/img/logo.svg"
+                alt="Logo Kelurahan Manahan"
+              />
+            </a>
+            <p class="font-semibold text-white">Kelurahan Manahan</p>
+          </div>
+          <!-- Tombol Navigasi untuk layar kecil -->
+          <button
+            id="navToggle"
+            class="md:hidden text-white focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Navbar Desktop -->
+          <nav
+            class="hidden md:flex flex-col md:flex-row gap-2 absolute md:relative top-14 md:top-auto left-0 right-0 md:left-auto md:right-auto bg-[#1C2B78] md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0"
+          >
+            <a
+              href="index.html"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Beranda
+            </a>
+            <div class="hidden relative md:inline-block">
+              <button
+                id="dropdownButtonHover"
+                class="transition-colors duration-300 font-semibold text-white bg-blue-900 px-3 py-1.5 rounded-md"
+              >
+                Profil Kelurahan
+              </button>
+              <ul
+                id="dropdownMenu"
+                class="absolute hidden text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md"
+              >
+                <a href="tentang-kami.html">
+                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                    Tentang Kami
+                  </li>
+                </a>
+                <a href="visi-misi.html">
+                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                    Visi & Misi
+                  </li>
+                </a>
+                <a href="sejarah.html">
+                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                    Sejarah
+                  </li>
+                </a>
+                <a href="geografis-kelurahan.html">
+                  <li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                    Geografis Kelurahan
+                  </li>
+                </a>
+                <a href="demografi-kelurahan.html">
+                  <li class="px-4 py-2 mt-1 bg-blue-800 cursor-pointer">
+                    Demografi Kelurahan
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Pemerintahan
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Pelayanan
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Organisasi
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Potensi Daerah
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Galeri Manahan
+            </a>
+          </nav>
+
+          <!-- Navbar Mobile -->
+          <nav
+            id="navMenu"
+            class="hidden h-screen bg-blue-800/90 backdrop-blur-md flex-row gap-2 absolute md:relative md:top-auto left-0 right-0 md:left-auto md:right-auto md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0"
+          >
+            <div class="flex flex-col justify-center items-start gap-4 h-full">
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 font-semibold text-white bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Beranda
+              </a>
+              <div class="relative w-full">
+                <button
+                  id="dropdownButton"
+                  class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
+                >
+                  Informasi Manahan
+                </button>
+                <ul
+                  id="dropdownList"
+                  class="relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
+                >
+                  <li
+                    class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Sejarah
+                  </li>
+                  <li
+                    class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Tentang Kami
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Pemerintahan
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Pelayanan
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Organisasi
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Potensi Daerah
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Galeri Manahan
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div
+          class="w-full bg-center bg-cover h-[50vh]"
+          style="background-image: url('./assets/img/testing.jpg')"
+        >
+          <div
+            class="pt-16 flex justify-center items-center px-6 md:px-20 py-8 w-full h-full bg-gray-800/80"
+          >
+            <h1 class="text-2xl font-bold text-white lg:text-3xl text-center">
+              Pelayanan di Kelurahan Manahan
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section class="spotlight-news">
+        <div class="container px-6 md:px-20 py-3 mx-auto">
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-8">
+              <header class="px-2 py-4 bg-blue-900">
+                <h1
+                  class="text-xl text-white font-bold lg:text-2xl text-center"
+                >
+                  Pelayanan Lainnya
+                </h1>
+              </header>
+              <div class="mt-4 p-4 rounded-xl shadow-xl bg-white">
+                <!-- Layanan Lainnya -->
+                <section class="">
+                  <h2 class="text-lg font-semibold text-blue-800">
+                    Pelayanan Lainnya
+                  </h2>
+                  <p class="mt-2">Waktu layanan:</p>
+                  <ul class="list-disc pl-5 mt-1">
+                    <li>Hari Senin – Kamis: Pukul 08.00 – 13.00 WIB</li>
+                    <li>Hari Jumat – Sabtu: Pukul 08.00 – 11.00 WIB</li>
+                  </ul>
+
+                  <h3 class="mt-4 font-semibold text-blue-700">
+                    Surat Permohonan Pindah
+                  </h3>
+                  <p class="mt-2">
+                    Dalam satu desa/kelurahan, prosedurnya adalah:
+                  </p>
+                  <ol class="list-decimal pl-5 mt-1">
+                    <li>
+                      Mengisi dan menandatangani formulir permohonan pindah
+                      (formulir F-1.08).
+                    </li>
+                    <li>Melampirkan KK dan KTP.</li>
+                    <li>Kepala desa menandatangani surat keterangan pindah.</li>
+                  </ol>
+                  <p class="mt-2">
+                    Antar desa/kelurahan dalam satu kecamatan, prosedurnya
+                    adalah:
+                  </p>
+                  <ul class="list-disc pl-5 mt-1">
+                    <li>
+                      Di tempat asal:
+                      <ol class="list-decimal pl-5 mt-1">
+                        <li>
+                          Mengisi dan menandatangani formulir permohonan pindah
+                          (formulir F-1.08).
+                        </li>
+                        <li>Melampirkan KK dan KTP.</li>
+                        <li>
+                          Kepala Lurah menandatangani surat keterangan pindah.
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      Di tempat tujuan:
+                      <ol class="list-decimal pl-5 mt-1">
+                        <li>
+                          Penduduk melaporkan kedatangan pada kepala desa/lurah
+                          dengan menunjukkan surat keterangan pindah dari tempat
+                          asal.
+                        </li>
+                        <li>
+                          Mengisi dan menandatangani formulir pindah datang.
+                        </li>
+                        <li>Kepala desa/lurah menandatangani surat datang.</li>
+                      </ol>
+                    </li>
+                  </ul>
+
+                  <h3 class="mt-4 font-semibold text-blue-700">
+                    Pembuatan Akta Kelahiran
+                  </h3>
+                  <p class="mt-2">
+                    Syarat pembuatan akta kelahiran adalah sebagai berikut:
+                  </p>
+                  <ul class="list-disc pl-5 mt-1">
+                    <li>
+                      Surat pengantar dari kepala desa/lurah yang diketahui
+                      camat.
+                    </li>
+                    <li>
+                      Surat kelahiran dari dokter/bidan, asli/difotokopi dan
+                      di-legalisir sebanyak 2 lembar.
+                    </li>
+                    <li>
+                      Fotokopi surat nikah/akta perkawinan di-legalisir sebanyak
+                      2 lembar.
+                    </li>
+                    <li>
+                      Fotokopi KTP orang tua di-legalisir lurah dan camat
+                      sebanyak 2 lembar.
+                    </li>
+                    <li>Fotokopi KK di-legalisir lurah dan camat.</li>
+                    <li>Fotokopi ijazah yang tercantum nama orang tua.</li>
+                    <li>
+                      Saksi pencatatan dan pelaporan datang menandatangani
+                      register, dan melampirkan fotokopi KTP.
+                    </li>
+                    <li>
+                      Permohonan akta kelahiran yang tidak diajukan oleh orang
+                      tua/yang bersangkutan dan dikuasakan orang lain harus
+                      melampirkan surat kuasa bermaterai.
+                    </li>
+                    <li>
+                      Permohonan akta anak usia lebih dari satu tahun harus
+                      melampirkan keputusan penetapan pengadilan.
+                    </li>
+                  </ul>
+
+                  <h3 class="mt-4 font-semibold text-blue-700">
+                    Surat Kematian
+                  </h3>
+                  <p class="mt-2">
+                    Syarat pembuatan surat kematian adalah sebagai berikut:
+                  </p>
+                  <ul class="list-disc pl-5 mt-1">
+                    <li>Pengantar RT.</li>
+                    <li>Fotokopi KTP.</li>
+                    <li>Fotokopi KK.</li>
+                    <li>Surat keterangan kematian dari dokter/bidan.</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+
+            <div class="col-span-3">
+              <!-- Sidebar Section -->
+              <aside class="p-4 bg-white rounded-xl shadow-lg">
+                <!-- Search Widget -->
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold text-blue-900">Pencarian</h3>
+                  <div class="flex mt-2">
+                    <input
+                      type="text"
+                      placeholder="Cari..."
+                      class="w-full px-4 py-2 text-sm border border-gray-300 rounded-l-md focus:ring-2 focus:ring-blue-900 focus:outline-none"
+                    />
+                    <button
+                      class="px-4 py-2 text-sm font-medium text-white bg-blue-900 rounded-r-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-900 focus:outline-none"
+                    >
+                      Cari
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Important Posts Widget -->
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold text-blue-900">
+                    Postingan Terakhir
+                  </h3>
+                  <ul class="mt-2 space-y-2">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >Manahan, Stadion Alternatif Pra Piala Asia</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >Lomba Orkes Keroncong Manahan Solo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >Puncak Memeriahkan Kemerdekaan RI - Wayang Kulit</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Archives Widget -->
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold text-blue-900">Arsip</h3>
+                  <ul class="mt-2 space-y-2">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >March 2015</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >September 2014</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >July 2014</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >May 2014</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Time Widget -->
+                <div class="current-time mt-4">
+                  <h3 class="font-bold text-lg mb-2">Waktu Sekarang</h3>
+                  <p id="current-time" class="text-gray-700"></p>
+                </div>
+
+                <!-- Calendar Widget -->
+                <div class="calendar mt-4">
+                  <h3 class="font-bold text-lg mb-2">Kalender</h3>
+                  <div
+                    id="calendar"
+                    class="border border-gray-300 rounded-lg p-2"
+                  ></div>
+                </div>
+
+                <!-- Visitor Widget -->
+                <div class="visitor mt-4">
+                  <h3 class="font-bold text-lg mb-2">Pengunjung</h3>
+                  <ul id="visitor-count" class="text-gray-700"></ul>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#1C2B78]">
+      <div class="container px-6 md:px-20 py-12 mx-auto">
+        <hr class="my-6 md:my-10 border-gray-500" />
+        <div
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
+          <div>
+            <p class="font-semibold text-white">Quick Link</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Who We Are</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Our Philosophy</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Industries</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Retail & E-Commerce</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Information Technology</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Finance & Insurance</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Services</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Translation</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Proofreading & Editing</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Content Creation</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Kontak Kami</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >(0271) 724427</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >kelurahanmanahan11@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 md:my-10 border-gray-500" />
+        <div class="flex flex-col items-center justify-between sm:flex-row">
+          <div class="flex gap-3 justify-center items-center">
+            <a href="#">
+              <img
+                class="w-auto h-12"
+                src="./assets/img/logo.svg"
+                alt="Logo Kelurahan Manahan"
+              />
+            </a>
+            <h1
+              class="text-xl font-semibold tracking-tight md:mx-3 xl:text-2xl text-white"
+            >
+              Kelurahan Manahan
+            </h1>
+          </div>
+          <p class="mt-4 text-sm sm:mt-0 text-gray-300">
+            © Copyright 2024. By KKN UNS Manahan.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Tampilkan/Menyembunyikan Navbar pada layar kecil
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+
+      const button = document.querySelector("#dropdownButtonHover");
+      const dropdown = document.querySelector("#dropdownMenu");
+
+      button.addEventListener("mouseenter", () => {
+        dropdown.classList.remove("hidden");
+      });
+
+      button.addEventListener("mouseleave", () => {
+        // Tambahkan delay untuk mencegah dropdown tertutup saat menuju submenu
+        setTimeout(() => {
+          if (!dropdown.matches(":hover")) {
+            dropdown.classList.add("hidden");
+          }
+        }, 200);
+      });
+
+      dropdown.addEventListener("mouseenter", () => {
+        dropdown.classList.remove("hidden");
+      });
+
+      dropdown.addEventListener("mouseleave", () => {
+        dropdown.classList.add("hidden");
+      });
+
+      const dropdownButton = document.getElementById("dropdownButton");
+      const dropdownList = document.getElementById("dropdownList");
+
+      dropdownButton.addEventListener("click", () => {
+        dropdownList.classList.toggle("hidden");
+      });
+
+      // Optional: Close dropdown if clicked outside
+      document.addEventListener("click", (event) => {
+        if (!dropdownButton.contains(event.target)) {
+          dropdownList.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // Waktu Sekarang
+      function updateTime() {
+        const now = new Date();
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+        };
+        const timeString = now.toLocaleDateString("id-ID", options);
+        document.getElementById("current-time").textContent = timeString;
+      }
+
+      setInterval(updateTime, 1000);
+      updateTime();
+
+      // Kalender Dinamis
+      function generateCalendar() {
+        const calendar = document.getElementById("calendar");
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth();
+        const today = now.getDate();
+
+        const monthName = now.toLocaleString("id-ID", { month: "long" });
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const firstDay = new Date(year, month, 1).getDay();
+
+        let calendarHTML = `<h4 class="text-center font-semibold">${monthName} ${year}</h4>`;
+        calendarHTML += `<div class="grid grid-cols-7 gap-1 mt-2">`;
+
+        // Days of the week
+        const daysOfWeek = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
+        for (let day of daysOfWeek) {
+          calendarHTML += `<div class="text-center font-semibold">${day}</div>`;
+        }
+
+        // Empty cells before the first day
+        for (let i = 0; i < firstDay; i++) {
+          calendarHTML += `<div class="text-center"></div>`;
+        }
+
+        // Days of the month
+        for (let day = 1; day <= daysInMonth; day++) {
+          const isToday =
+            day === today ? "bg-blue-500 text-white rounded-full" : "";
+          calendarHTML += `<div class="text-center ${isToday}">${day}</div>`;
+        }
+
+        calendarHTML += `</div>`;
+        calendar.innerHTML = calendarHTML;
+      }
+
+      generateCalendar();
+
+      // Pengunjung Dinamis
+      function generateVisitorCount() {
+        const visitors = {
+          ID: Math.floor(Math.random() * 10000),
+          SG: Math.floor(Math.random() * 100),
+          MY: Math.floor(Math.random() * 100),
+          JP: Math.floor(Math.random() * 100),
+        };
+
+        let visitorHTML = "";
+        for (let country in visitors) {
+          visitorHTML += `<li>${country}: ${visitors[country]}</li>`;
+        }
+
+        document.getElementById("visitor-count").innerHTML = visitorHTML;
+      }
+
+      generateVisitorCount();
+    </script>
+  </body>
+</html>
