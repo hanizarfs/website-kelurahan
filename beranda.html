@@ -1,158 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kelurahan Manahan</title>
-    <link rel="stylesheet" href="berandastyle.css">
-</head>
-<body>
-    <header class="px-12">
-        <div class="container flex justify-between items-center">
-            <div class="flex gap-2 justify-center items-center">
-                <img src="./assets/img/logo.svg" class="w-10 h-10" alt="Kelurahan Manahan Logo" />
-                <p>Kelurahan Manahan</p>
+    <!-- <link rel="stylesheet" href="berandastyle.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-[#1C2B78] fixed top-0 z-20 w-full">
+      <div class="container px-6 md:px-20 py-3 mx-auto">
+        <div class="flex justify-between items-center">
+          <div class="flex gap-3 justify-center items-center">
+            <a href="#">
+              <img
+                class="w-auto h-10"
+                src="./assets/img/logo.svg"
+                alt="Logo Kelurahan Manahan"
+              />
+            </a>
+            <p class="font-semibold text-white">Kelurahan Manahan</p>
+          </div>
+          <!-- Tombol Navigasi untuk layar kecil -->
+          <button
+            id="navToggle"
+            class="md:hidden text-white focus:outline-none"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Navbar Desktop -->
+          <nav
+            class="hidden md:flex flex-col md:flex-row gap-2 absolute md:relative top-14 md:top-auto left-0 right-0 md:left-auto md:right-auto bg-[#1C2B78] md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0"
+          >
+            <a
+              href="#"
+              class="transition-colors duration-300 font-semibold text-white bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Beranda
+            </a>
+            <div class="hidden relative md:inline-block">
+              <button
+                id="dropdownButtonHover"
+                class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+              >
+                Informasi Manahan
+              </button>
+              <ul
+                id="dropdownMenu"
+                class="absolute hidden text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md"
+              >
+                <li class="px-4 py-2 hover:bg-blue-800 cursor-pointer">
+                  Sejarah
+                </li>
+                <li class="px-4 py-2 hover:bg-blue-800 cursor-pointer">
+                  Tentang Kami
+                </li>
+              </ul>
             </div>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Informasi Manahan</a></li>
-                    <li><a href="#">Pemerintahan</a></li>
-                    <li><a href="#">Pelayanan</a></li>
-                    <li><a href="#">Organisasi</a></li>
-                    <li><a href="#">Potensi Daerah</a></li>
-                    <li><a href="#">Galeri Manahan</a></li>
-                    <li><a href="#">Stadion Manahan</a></li>
-                    <li><a href="#">About</a></li>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Pemerintahan
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Pelayanan
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Organisasi
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Potensi Daerah
+            </a>
+            <a
+              href="#"
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Galeri Manahan
+            </a>
+          </nav>
+
+          <!-- Navbar Mobile -->
+          <nav
+            id="navMenu"
+            class="hidden h-screen bg-blue-800/90 backdrop-blur-md flex-row gap-2 absolute md:relative md:top-auto left-0 right-0 md:left-auto md:right-auto md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0"
+          >
+            <div class="flex flex-col justify-center items-start gap-4 h-full">
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 font-semibold text-white bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Beranda
+              </a>
+              <div class="relative w-full">
+                <button
+                  id="dropdownButton"
+                  class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
+                >
+                  Informasi Manahan
+                </button>
+                <ul
+                  id="dropdownList"
+                  class="relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
+                >
+                  <li
+                    class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Sejarah
+                  </li>
+                  <li
+                    class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Tentang Kami
+                  </li>
                 </ul>
-            </nav>
+              </div>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Pemerintahan
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Pelayanan
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Organisasi
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Potensi Daerah
+              </a>
+              <a
+                href="#"
+                class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >
+                Galeri Manahan
+              </a>
+            </div>
+          </nav>
         </div>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Kelurahan Manahan</h1>
-                <p>Discover Kelurahan Manahan, where tradition meets modernity.</p>
-                <button>Explore</button>
+      <section class="hero">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="w-full bg-center bg-cover h-screen"
+                style="background-image: url('./assets/img/testing.jpg')"
+              >
+                <div
+                  class="pt-16 flex flex-col justify-center items-start px-6 md:px-20 py-8 w-full h-full bg-gray-800/80"
+                >
+                  <p
+                    class="text-base md:text-xl text-white text-center md:text-start"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magni, veniam!
+                  </p>
+                  <h1
+                    class="text-2xl font-bold text-white lg:text-5xl text-center md:text-start"
+                  >
+                    Kelurahan Manahan
+                  </h1>
+                  <button
+                    class="w-auto px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#1C2B78] rounded-md lg:w-auto hover:bg-blue-900 focus:outline-none focus:bg-blue-900"
+                  >
+                    Explore More
+                  </button>
+                </div>
+              </div>
             </div>
-        </section>
+            <div class="swiper-slide">
+              <div
+                class="w-full bg-center bg-cover h-screen"
+                style="background-image: url('./assets/img/testing.jpg')"
+              >
+                <div
+                  class="pt-16 flex flex-col justify-center items-start px-6 md:px-20 py-8 w-full h-full bg-gray-800/80"
+                >
+                  <p
+                    class="text-base md:text-xl text-white text-center md:text-start"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Magni, veniam!
+                  </p>
+                  <h1
+                    class="text-2xl font-bold text-white lg:text-5xl text-center md:text-start"
+                  >
+                    Kelurahan Manahan
+                  </h1>
+                  <button
+                    class="w-auto px-5 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#1C2B78] rounded-md lg:w-auto hover:bg-blue-900 focus:outline-none focus:bg-blue-900"
+                  >
+                    Explore More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
 
-        <section class="spotlight-news">
-            <!-- Spotlight Section -->
-            <div class="spotlight">
-                <h2>Spotlight</h2>
-                <div class="spotlight-item">
-                    <img src="path-to-image1.jpg" alt="Spotlight Image">
-                    <div class="spotlight-text">
-                        <h3>Web Resmi Kelurahan Manahan</h3>
-                        <p>Selamat Datang di Web Resmi Kelurahan Manahan...</p>
-                        <a href="#">Read More</a>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Government News and Events Section -->
-            <div class="news-events">
-                <h2>Government News and Events</h2>
-                <div class="announcement">
-                    <img src="path-to-image2.jpg" alt="Manahan Announcement">
+      <section class="spotlight-news">
+        <div class="container px-6 md:px-20 py-3 mx-auto">
+          <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-8">
+              <header class="px-2 py-4 bg-blue-900">
+                <h1 class="text-2xl text-white font-bold lg:text-3xl text-center">
+                  Spotlight
+                </h1>
+              </header>
+              <div class="mt-4 shadow-md p-4 rounded-xl">
+                <img
+                  class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                  src="./assets/img/pendopo.png"
+                  alt=""
+                />
+                <div class="mt-4">
+                  <span class="text-blue-900 uppercase">Kategori</span>
+
+                  <h1 class="mt-4 text-xl font-semibold">
+                    Selamat Datang di Website Kelurahan
+                  </h1>
+
+                  <p class="mt-2 text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    est asperiores vel, ab animi recusandae nulla veritatis id
+                    tempore sapiente
+                  </p>
+
+                  <div class="flex items-center justify-between mt-4">
                     <div>
-                        <h3>Manahan, Stadion Alternatif Pra Piala Asia</h3>
-                        <p>Stadion Manahan Solo akan menjadi venue...</p>
-                        <a href="#">Read More</a>
+                      <a
+                        href="#"
+                        class="text-lg font-medium text-gray-700 hover:underline hover:text-gray-700"
+                      >
+                        John snow
+                      </a>
+
+                      <p class="text-sm text-gray-700">22 Agustus 2024</p>
                     </div>
+                    <a
+                      href="#"
+                      class="w-auto px-5 py-2 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#1C2B78] rounded-md lg:w-auto hover:bg-blue-900 focus:outline-none focus:bg-blue-900"
+                    >
+                      Selengkapnya
+                    </a>
+                  </div>
                 </div>
-        
-                <div class="announcement">
-                    <img src="path-to-image3.jpg" alt="Event Image">
+              </div>
+              <div class="mt-4 shadow-md p-4 rounded-xl">
+                <img
+                  class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+                  src="./assets/img/pendopo.png"
+                  alt=""
+                />
+                <div class="mt-4">
+                  <span class="text-blue-900 uppercase">Kategori</span>
+
+                  <h1 class="mt-4 text-xl font-semibold">
+                    Selamat Datang di Website Kelurahan
+                  </h1>
+
+                  <p class="mt-2 text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                    est asperiores vel, ab animi recusandae nulla veritatis id
+                    tempore sapiente
+                  </p>
+
+                  <div class="flex items-center justify-between mt-4">
                     <div>
-                        <h3>Lomba Orkes Keroncong Manahan Solo</h3>
-                        <p>Dalam rangka memperingati HUT RI ke-78 tahun 2024...</p>
-                        <a href="#">Read More</a>
+                      <a
+                        href="#"
+                        class="text-lg font-medium text-gray-700 hover:underline hover:text-gray-700"
+                      >
+                        John snow
+                      </a>
+
+                      <p class="text-sm text-gray-700">22 Agustus 2024</p>
                     </div>
+                    <a
+                      href="#"
+                      class="w-auto px-5 py-2 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-[#1C2B78] rounded-md lg:w-auto hover:bg-blue-900 focus:outline-none focus:bg-blue-900"
+                    >
+                      Selengkapnya
+                    </a>
+                  </div>
                 </div>
-        
-                <div class="announcement">
-                    <img src="path-to-image4.jpg" alt="Wayang Kulit Event">
-                    <div>
-                        <h3>Puncak Memeriahkan Kemerdekaan RI - Wayang Kulit</h3>
-                        <p>Kelurahan Manahan mengadakan acara seni budaya...</p>
-                        <a href="#">Read More</a>
-                    </div>
+              </div>
+            </div>
+            <div class="col-span-3">
+              <!-- Sidebar Section -->
+              <aside class="p-4 bg-white rounded-xl shadow-lg">
+                <!-- Search Widget -->
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold text-blue-900">Pencarian</h3>
+                  <div class="flex mt-2">
+                    <input
+                      type="text"
+                      placeholder="Cari..."
+                      class="w-full px-4 py-2 text-sm border border-gray-300 rounded-l-md focus:ring-2 focus:ring-blue-900 focus:outline-none"
+                    />
+                    <button
+                      class="px-4 py-2 text-sm font-medium text-white bg-blue-900 rounded-r-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-900 focus:outline-none"
+                    >
+                      Cari
+                    </button>
+                  </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Sidebar Section -->
-        <aside class="sidebar">
-            <!-- Search Widget -->
-            <div class="search-widget">
-                <h3>Pencarian</h3>
-                <div class="search-container">
-                    <input type="text" placeholder="Cari...">
-                    <button>Cari</button>
+
+                <!-- Important Posts Widget -->
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold text-blue-900">
+                    Postingan Terakhir
+                  </h3>
+                  <ul class="mt-2 space-y-2">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >Manahan, Stadion Alternatif Pra Piala Asia</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >Lomba Orkes Keroncong Manahan Solo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >Puncak Memeriahkan Kemerdekaan RI - Wayang Kulit</a
+                      >
+                    </li>
+                  </ul>
                 </div>
+
+                <!-- Archives Widget -->
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold text-blue-900">Arsip</h3>
+                  <ul class="mt-2 space-y-2">
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >March 2015</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >September 2014</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >July 2014</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="text-sm text-gray-700 hover:text-blue-900 hover:underline"
+                        >May 2014</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Time Widget -->
+                <div class="current-time mt-4">
+                  <h3 class="font-bold text-lg mb-2">Waktu Sekarang</h3>
+                  <p id="current-time" class="text-gray-700"></p>
+                </div>
+
+                <!-- Calendar Widget -->
+                <div class="calendar mt-4">
+                  <h3 class="font-bold text-lg mb-2">Kalender</h3>
+                  <div
+                    id="calendar"
+                    class="border border-gray-300 rounded-lg p-2"
+                  ></div>
+                </div>
+
+                <!-- Visitor Widget -->
+                <div class="visitor mt-4">
+                  <h3 class="font-bold text-lg mb-2">Pengunjung</h3>
+                  <ul id="visitor-count" class="text-gray-700"></ul>
+                </div>
+              </aside>
             </div>
-        
-            <!-- Important Posts Widget -->
-            <div class="important-posts">
-                <h3>Postingan Terakhir</h3>
-                <ul>
-                    <li><a href="#">Manahan, Stadion Alternatif Pra Piala Asia</a></li>
-                    <li><a href="#">Lomba Orkes Keroncong Manahan Solo</a></li>
-                    <li><a href="#">Puncak Memeriahkan Kemerdekaan RI - Wayang Kulit</a></li>
-                </ul>
-            </div>
-        
-            <!-- Archives Widget -->
-            <div class="archives">
-                <h3>Archives</h3>
-                <ul>
-                    <li><a href="#">March 2015</a></li>
-                    <li><a href="#">September 2014</a></li>
-                    <li><a href="#">July 2014</a></li>
-                    <li><a href="#">May 2014</a></li>
-                </ul>
-            </div>
-        
-            <!-- Time Widget -->
-            <div class="current-time">
-                <h3>Waktu Sekarang</h3>
-                <p>Wednesday, 14 August 2024<br>10:00:01 AM (Local Time)</p>
-            </div>
-        
-            <!-- Calendar Widget -->
-            <div class="calendar">
-                <h3>Kalender</h3>
-                <!-- Static Calendar Implementation -->
-                <img src="path-to-calendar-image.jpg" alt="Calendar" />
-            </div>
-        
-            <!-- Visitor Widget -->
-            <div class="visitor">
-                <h3>Pengunjung</h3>
-                <ul>
-                    <li>ID: 12540</li>
-                    <li>SG: 15</li>
-                    <li>MY: 20</li>
-                    <li>JP: 9</li>
-                </ul>
-            </div>
-        </aside>
-        
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Kelurahan Manahan. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
+    <footer class="bg-[#1C2B78]">
+      <div class="container px-6 md:px-20 py-12 mx-auto">
+        <hr class="my-6 md:my-10 border-gray-500" />
+        <div
+          class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
+          <div>
+            <p class="font-semibold text-white">Quick Link</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Who We Are</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Our Philosophy</a
+              >
             </div>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Industries</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Retail & E-Commerce</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Information Technology</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Finance & Insurance</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Services</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Translation</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Proofreading & Editing</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Content Creation</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold text-white">Kontak Kami</p>
+            <div class="flex flex-col items-start mt-5 space-y-2">
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >(0271) 724427</a
+              >
+              <a
+                href="#"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >kelurahanmanahan11@gmail.com</a
+              >
+            </div>
+          </div>
         </div>
+        <hr class="my-6 md:my-10 border-gray-500" />
+        <div class="flex flex-col items-center justify-between sm:flex-row">
+          <div class="flex gap-3 justify-center items-center">
+            <a href="#">
+              <img
+                class="w-auto h-12"
+                src="./assets/img/logo.svg"
+                alt="Logo Kelurahan Manahan"
+              />
+            </a>
+            <h1
+              class="text-xl font-semibold tracking-tight md:mx-3 xl:text-2xl text-white"
+            >
+              Kelurahan Manahan
+            </h1>
+          </div>
+          <p class="mt-4 text-sm sm:mt-0 text-gray-300">
+            © Copyright 2024. By KKN UNS Manahan.
+          </p>
+        </div>
+      </div>
     </footer>
-</body>
+
+    <script>
+      // Tampilkan/Menyembunyikan Navbar pada layar kecil
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+
+      const button = document.querySelector("#dropdownButtonHover");
+      const dropdown = document.querySelector("#dropdownMenu");
+
+      button.addEventListener("mouseenter", () => {
+        dropdown.classList.remove("hidden");
+      });
+
+      button.addEventListener("mouseleave", () => {
+        // Tambahkan delay untuk mencegah dropdown tertutup saat menuju submenu
+        setTimeout(() => {
+          if (!dropdown.matches(":hover")) {
+            dropdown.classList.add("hidden");
+          }
+        }, 200);
+      });
+
+      dropdown.addEventListener("mouseenter", () => {
+        dropdown.classList.remove("hidden");
+      });
+
+      dropdown.addEventListener("mouseleave", () => {
+        dropdown.classList.add("hidden");
+      });
+
+      const dropdownButton = document.getElementById("dropdownButton");
+      const dropdownList = document.getElementById("dropdownList");
+
+      dropdownButton.addEventListener("click", () => {
+        dropdownList.classList.toggle("hidden");
+      });
+
+      // Optional: Close dropdown if clicked outside
+      document.addEventListener("click", (event) => {
+        if (!dropdownButton.contains(event.target)) {
+          dropdownList.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // Waktu Sekarang
+      function updateTime() {
+        const now = new Date();
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric",
+        };
+        const timeString = now.toLocaleDateString("id-ID", options);
+        document.getElementById("current-time").textContent = timeString;
+      }
+
+      setInterval(updateTime, 1000);
+      updateTime();
+
+      // Kalender Dinamis
+      function generateCalendar() {
+        const calendar = document.getElementById("calendar");
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = now.getMonth();
+        const today = now.getDate();
+
+        const monthName = now.toLocaleString("id-ID", { month: "long" });
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const firstDay = new Date(year, month, 1).getDay();
+
+        let calendarHTML = `<h4 class="text-center font-semibold">${monthName} ${year}</h4>`;
+        calendarHTML += `<div class="grid grid-cols-7 gap-1 mt-2">`;
+
+        // Days of the week
+        const daysOfWeek = ["Min", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
+        for (let day of daysOfWeek) {
+          calendarHTML += `<div class="text-center font-semibold">${day}</div>`;
+        }
+
+        // Empty cells before the first day
+        for (let i = 0; i < firstDay; i++) {
+          calendarHTML += `<div class="text-center"></div>`;
+        }
+
+        // Days of the month
+        for (let day = 1; day <= daysInMonth; day++) {
+          const isToday =
+            day === today ? "bg-blue-500 text-white rounded-full" : "";
+          calendarHTML += `<div class="text-center ${isToday}">${day}</div>`;
+        }
+
+        calendarHTML += `</div>`;
+        calendar.innerHTML = calendarHTML;
+      }
+
+      generateCalendar();
+
+      // Pengunjung Dinamis
+      function generateVisitorCount() {
+        const visitors = {
+          ID: Math.floor(Math.random() * 10000),
+          SG: Math.floor(Math.random() * 100),
+          MY: Math.floor(Math.random() * 100),
+          JP: Math.floor(Math.random() * 100),
+        };
+
+        let visitorHTML = "";
+        for (let country in visitors) {
+          visitorHTML += `<li>${country}: ${visitors[country]}</li>`;
+        }
+
+        document.getElementById("visitor-count").innerHTML = visitorHTML;
+      }
+
+      generateVisitorCount();
+    </script>
+  </body>
 </html>
