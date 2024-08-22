@@ -8,88 +8,451 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.svg" />
   </head>
   <body>
-    <header class="bg-[#1C2B78] fixed top-0 z-20 w-full">
-      <div class="container px-6 md:px-20 py-3 mx-auto">
-        <div class="flex justify-between items-center">
-          <div class="flex gap-3 justify-center items-center">
-            <a href="#">
-              <img
-                class="w-auto h-10"
-                src="./assets/img/logo.svg"
-                alt="Logo Kelurahan Manahan"
-              />
-            </a>
-            <p class="font-semibold text-white">Kelurahan Manahan</p>
+    <!-- ========== START OF HEADER ========== -->
+   <header class="bg-[#1C2B78] fixed top-0 z-20 w-full shadow-2xl">
+    <div class="container px-6 md:px-20 py-3 mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="flex gap-3 justify-center items-center">
+          <a href="index.html">
+            <img
+              class="w-auto h-10"
+              src="./assets/img/logo.svg"
+              alt="Logo Kelurahan Manahan"
+            />
+          </a>
+          <p class="font-semibold text-white">Kelurahan Manahan</p>
+        </div>
+
+        <!-- ========== START OF NAVBAR DESKTOP ========== -->
+        <nav
+          class="hidden md:flex flex-col md:flex-row gap-2 absolute md:relative top-14 md:top-auto left-0 right-0 md:left-auto md:right-auto bg-[#1C2B78] md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0"
+        >
+          <a
+            href="index.html"
+            class="transition-colors duration-300 font-semibold text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >Beranda</a
+          >
+
+          <div class="relative md:inline-block group">
+            <button
+              class="transition-colors duration-300 text-white bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Profil Kelurahan
+            </button>
+            <ul
+              class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md"
+            >
+              <a href="tentang-kami.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Tentang Kami
+                </li></a
+              >
+              <a href="visi-misi.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Visi & Misi
+                </li></a
+              >
+              <a href="sejarah.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Sejarah
+                </li></a
+              >
+              <a href="geografis-kelurahan.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Geografis Kelurahan
+                </li></a
+              >
+              <a href="demografi-kelurahan.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Demografi Kelurahan
+                </li></a
+              >
+            </ul>
           </div>
 
-<!-- Navbar Desktop -->
-<nav class="hidden md:flex flex-col md:flex-row gap-2 absolute md:relative top-14 md:top-auto left-0 right-0 md:left-auto md:right-auto bg-[#1C2B78] md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0">
-  <a href="index.html" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Beranda</a>
-  
-  <div class="relative md:inline-block group">
-    <button class="transition-colors duration-300 font-semibold text-white bg-blue-900 px-3 py-1.5 rounded-md">Profil Kelurahan</button>
-    <ul class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md">
-      <a href="tentang-kami.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Tentang Kami</li></a>
-      <a href="visi-misi.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Visi & Misi</li></a>
-      <a href="sejarah.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Sejarah</li></a>
-      <a href="geografis-kelurahan.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Geografis Kelurahan</li></a>
-      <a href="demografi-kelurahan.html"><li class="px-4 py-2 mt-1 bg-blue-800 cursor-pointer">Demografi Kelurahan</li></a>
-    </ul>
-  </div>
+          <div class="relative md:inline-block group">
+            <button
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Pemerintahan
+            </button>
+            <ul
+              class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md"
+            >
+              <a href="struktur-organisasi.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Struktur Organisasi
+                </li></a
+              >
+              <a href="perangkat-kelurahan.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Perangkat Kelurahan
+                </li></a
+              >
+            </ul>
+          </div>
+          <div class="relative md:inline-block group">
+            <button
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Pelayanan
+            </button>
+            <ul
+              class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md"
+            >
+              <a href="kartu-keluarga.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Kartu Keluarga (KK)
+                </li></a
+              >
+              <a href="kartu-tanda-penduduk.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Kartu Tanda Penduduk (KTP)
+                </li></a
+              >
+              <a href="pelayanan-lainnya.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Pelayanan Lainnya
+                </li></a
+              >
+            </ul>
+          </div>
+          <div class="relative md:inline-block group">
+            <button
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Organisasi
+            </button>
+            <ul
+              class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md"
+            >
+              <a href="lpmk.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  LPMK
+                </li></a
+              >
+              <a href="lpm.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  LPM
+                </li></a
+              >
+              <a href="pkk.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  PKK
+                </li></a
+              >
+              <a href="karang-taruna.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Karang Taruna
+                </li></a
+              >
+            </ul>
+          </div>
+          <a
+            href="potensi-kelurahan.html"
+            class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >Potensi Kelurahan</a
+          >
+          <div class="relative md:inline-block group">
+            <button
+              class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md"
+            >
+              Informasi
+            </button>
+            <ul
+              class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-32 rounded-md"
+            >
+              <a href="galeri.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Galeri
+                </li></a
+              >
+              <a href="pengumuman.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Pengumuman
+                </li></a
+              >
+              <a href="stadion.html"
+                ><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">
+                  Stadion Manahan
+                </li></a
+              >
+            </ul>
+          </div>
+        </nav>
+        <!-- ========== END OF NAVBAR DESKTOP ========== -->
 
-  <div class="relative md:inline-block group">
-    <button class="transition-colors duration-300 font-semibold text-white bg-blue-900 px-3 py-1.5 rounded-md">Pemerintahan</button>
-    <ul class="absolute hidden group-hover:block text-gray-200 mt-2 bg-blue-900 py-2 w-48 rounded-md">
-      <a href="struktur-organisasi.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Struktur Organisasi</li></a>
-      <a href="perangkat-kelurahan.html"><li class="px-4 py-2 mt-1 hover:bg-blue-800 cursor-pointer">Perangkat Kelurahan</li></a>
-    </ul>
-  </div>
+        <!-- ========== START OF NAVBAR MOBILE ========== -->
+        <nav
+          id="navMenu"
+          class="hidden h-screen bg-[#1C2B78] backdrop-blur-md absolute top-0 left-0 right-0 md:bg-transparent shadow-lg md:shadow-none md:mt-0 px-6 py-3 md:p-0"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex gap-3 justify-center items-center">
+              <a href="index.html">
+                <img
+                  class="w-auto h-10"
+                  src="./assets/img/logo.svg"
+                  alt="Logo Kelurahan Manahan"
+                />
+              </a>
+              <p class="font-semibold text-white">Kelurahan Manahan</p>
+            </div>
+            <button
+              id="close-btn"
+              class="p-1 text-white rounded-lg absolute top-4 right-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
 
-  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Pelayanan</a>
-  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Organisasi</a>
-  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Potensi Daerah</a>
-  <a href="#" class="transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-3 py-1.5 rounded-md">Galeri Manahan</a>
-</nav>
+          <div class="flex flex-col justify-center items-start gap-4 h-full">
+            <a
+              href="index.html"
+              class="text-xl transition-colors duration-300 font-semibold text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >Beranda</a
+            >
+            <div class="relative w-full">
+              <button
+                class="dropdownButton text-xl transition-colors duration-300 text-white bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
+              >
+                Profil Kelurahan
+              </button>
+              <ul
+                class="dropdownList relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
+              >
+                <a href="tentang-kami.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Tentang Kami
+                  </li>
+                </a>
+                <a href="visi-misi.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Visi & Misi
+                  </li>
+                </a>
+                <a href="sejarah.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Sejarah
+                  </li>
+                </a>
+                <a href="geografis-kelurahan.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Geografis Kelurahan
+                  </li>
+                </a>
+                <a href="demografi-kelurahan.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Demografi Kelurahan
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="relative w-full">
+              <button
+                class="dropdownButton text-xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
+              >
+                Pemerintahan
+              </button>
+              <ul
+                class="dropdownList relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
+              >
+                <a href="struktur-organisasi.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Struktur Organisasi
+                  </li>
+                </a>
+                <a href="perangkat-kelurahan.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Perangkat Kelurahan
+                  </li>
+                </a>
+                <a href="lembaga-desa.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Lembaga Desa
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="relative w-full">
+              <button
+                class="dropdownButton text-xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
+              >
+                Pelayanan
+              </button>
+              <ul
+                class="dropdownList relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
+              >
+                <a href="kartu-keluarga.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Kartu Keluarga (KK)
+                  </li>
+                </a>
+                <a href="kartu-tanda-penduduk.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Kartu Tanda Penduduk (KTP)
+                  </li>
+                </a>
+                <a href="pelayanan-lainnya.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Pelayanan Lainnya
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <div class="relative w-full">
+              <button
+                class="dropdownButton text-xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
+              >
+                Organsiasi
+              </button>
+              <ul
+                class="dropdownList relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
+              >
+                <a href="lpmk.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    LPMK
+                  </li>
+                </a>
+                <a href="lpm.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    LPM
+                  </li>
+                </a>
+                <a href="pkk.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    PKK
+                  </li>
+                </a>
+                <a href="karang-taruna.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Karang Taruna
+                  </li>
+                </a>
+              </ul>
+            </div>
+            <a
+              href="potensi-kelurahan.html"
+              class="text-xl transition-colors duration-300 font-semibold text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full"
+              >Potensi Kelurahan</a
+            >
+            <div class="relative w-full">
+              <button
+                class="dropdownButton text-xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start"
+              >
+                Informasi
+              </button>
+              <ul
+                class="dropdownList relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full"
+              >
+                <a href="galeri.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Galeri
+                  </li>
+                </a>
+                <a href="pengumuman.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Pengumuman
+                  </li>
+                </a>
 
-<!-- Navbar Mobile -->
-<nav id="navMenu" class="hidden h-screen bg-blue-800/90 backdrop-blur-md absolute top-0 left-0 right-0 md:bg-transparent shadow-lg md:shadow-none md:mt-0 p-4 md:p-0">
-  <button id="close-btn" class="p-1 text-white rounded-lg absolute top-4 right-4">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
-  
-  <div class="flex flex-col justify-center items-start gap-4 h-full">
-    <a href="#" class="text-2xl transition-colors duration-300 font-semibold text-white bg-blue-900 px-6 py-4 rounded-xl w-full">Beranda</a>
-    
-    <div class="relative w-full">
-      <button id="dropdownButton" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full text-start">Informasi Manahan</button>
-      <ul id="dropdownList" class="relative hidden text-gray-200 bg-blue-900 mt-2 py-6 rounded-xl w-full">
-        <li class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer">Sejarah</li>
-        <li class="text-2xl px-4 py-2 hover:bg-blue-800 cursor-pointer">Tentang Kami</li>
-      </ul>
-    </div>
-    
-    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Pemerintahan</a>
-    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Pelayanan</a>
-    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Organisasi</a>
-    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Potensi Daerah</a>
-    <a href="#" class="text-2xl transition-colors duration-300 text-gray-300 hover:text-white hover:bg-blue-900 px-6 py-4 rounded-xl w-full">Galeri Manahan</a>
-  </div>
-</nav>
+                <a href="stadion.html">
+                  <li
+                    class="text-xl px-4 py-2 hover:bg-blue-800 cursor-pointer"
+                  >
+                    Stadion Manahan
+                  </li>
+                </a>
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-<!-- Menu Button for Mobile -->
-<button id="menu-btn" class="text-white p-1 rounded-lg block md:hidden">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16" />
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h7" />
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16" />
-  </svg>
-</button>
+        <!-- ========== END OF NAVBAR MOBILE ========== -->
 
-        </div>
+        <!-- ========== MENU BUTTON FOR MOBILE ========== -->
+        <button
+          id="menu-btn"
+          class="text-white p-1 rounded-lg block md:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 18h7"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 12h16"
+            />
+          </svg>
+        </button>
       </div>
-    </header>
+    </div>
+  </header>
+  <!-- ========== END OF HEADER ========== -->
 
     <main>
       <section class="hero">
@@ -635,62 +998,62 @@
           class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
         >
           <div>
-            <p class="font-semibold text-white">Quick Link</p>
+            <p class="font-semibold text-white">Navigasi Utama</p>
             <div class="flex flex-col items-start mt-5 space-y-2">
               <a
-                href="#"
+                href="index.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Home</a
+                >Beranda</a
               >
               <a
-                href="#"
+                href="tentang-kami.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Who We Are</a
+                >Tentang Kami</a
               >
               <a
-                href="#"
+                href="visi-misi.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Our Philosophy</a
+                >Visi & Misi</a
+              >
+              <a
+                href="sejarah.html"
+                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
+                >Sejarah</a
               >
             </div>
           </div>
           <div>
-            <p class="font-semibold text-white">Industries</p>
+            <p class="font-semibold text-white">Pemerintahan</p>
             <div class="flex flex-col items-start mt-5 space-y-2">
               <a
-                href="#"
+                href="struktur-organisasi.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Retail & E-Commerce</a
+                >Struktur Organisasi</a
               >
               <a
-                href="#"
+                href="perangkat-kelurahan.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Information Technology</a
-              >
-              <a
-                href="#"
-                class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Finance & Insurance</a
+                >Perangkat Kelurahan</a
               >
             </div>
           </div>
           <div>
-            <p class="font-semibold text-white">Services</p>
+            <p class="font-semibold text-white">Pelayanan</p>
             <div class="flex flex-col items-start mt-5 space-y-2">
               <a
-                href="#"
+                href="kartu-keluarga.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Translation</a
+                >Kartu Keluarga (KK)</a
               >
               <a
-                href="#"
+                href="kartu-tanda-penduduk.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Proofreading & Editing</a
+                >Kartu Tanda Penduduk (KTP)</a
               >
               <a
-                href="#"
+                href="pelayanan-lainnya.html"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
-                >Content Creation</a
+                >Pelayanan Lainnya</a
               >
             </div>
           </div>
@@ -703,7 +1066,7 @@
                 >(0271) 724427</a
               >
               <a
-                href="#"
+                href="mailto:kelurahanmanahan11@gmail.com"
                 class="transition-colors duration-300 text-gray-300 hover:underline hover:text-white"
                 >kelurahanmanahan11@gmail.com</a
               >
@@ -732,6 +1095,51 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.getElementById("menu-btn");
+  const closeButton = document.getElementById("close-btn");
+  const navMenu = document.getElementById("navMenu");
+
+  // Toggle mobile menu
+  menuButton.addEventListener("click", () => {
+    navMenu.classList.remove("hidden");
+  });
+
+  closeButton.addEventListener("click", () => {
+    navMenu.classList.add("hidden");
+  });
+
+  // Handle dropdown buttons
+  const dropdownButtons = document.querySelectorAll(".dropdownButton");
+  dropdownButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const dropdownList = button.nextElementSibling;
+      dropdownList.classList.toggle("hidden");
+
+      // Close other dropdowns
+      dropdownButtons.forEach((btn) => {
+        if (btn !== button) {
+          const otherDropdownList = btn.nextElementSibling;
+          otherDropdownList.classList.add("hidden");
+        }
+      });
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".dropdownButton")) {
+      const dropdownLists = document.querySelectorAll(".dropdownList");
+      dropdownLists.forEach((list) => {
+        list.classList.add("hidden");
+      });
+    }
+  });
+});
+
+    </script>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
